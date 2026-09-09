@@ -1,57 +1,253 @@
 <!DOCTYPE html>
-<html
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+  <title>SKALLA — Writer & Art Performance</title>
 
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background: white;
-      color: #111;
-      font-family: Arial, sans-serif;
-      text-align: center;
+      padding: 0;
     }
 
-    h1 {
-      margin-top: 60px;
-      font-size: 48px;
+    body {
+      background: #050505;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 6%;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .photo {
+      width: 100%;
+      min-height: 650px;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.05),
+          rgba(0,0,0,0.30)
+        ),
+        url("skalla.jpg") center center / cover no-repeat;
+
+      border: 1px solid #222;
+    }
+
+    .content {
+      padding: 20px 0;
+    }
+
+    .brand {
+      font-size: clamp(58px, 9vw, 120px);
+      font-weight: 800;
+      letter-spacing: 10px;
+      line-height: 0.9;
+      margin-bottom: 25px;
+    }
+
+    .subtitle {
+      font-size: 14px;
       letter-spacing: 5px;
-      font-weight: normal;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 45px;
     }
 
-    p {
-      font-size: 20px;
-      color: #666;
+    .statement {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(25px, 3vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 15px;
     }
 
-    .gallery {
-      margin: 40px auto;
-      max-width: 900px;
-      padding: 20px;
+    .statement-small {
+      font-size: 16px;
+      color: #aaa;
+      line-height: 1.7;
+      margin-bottom: 45px;
+      max-width: 520px;
     }
 
-    .gallery img {
-      max-width: 100%;
-      height: auto;
+    .works-title {
+      font-size: 12px;
+      letter-spacing: 4px;
+      color: #777;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .works {
+      display: grid;
+      gap: 10px;
+    }
+
+    .work {
       display: block;
-      margin: 0 auto;
+      width: 100%;
+      padding: 15px 18px;
+
+      color: #fff;
+      background: transparent;
+
+      border: 1px solid #333;
+
+      text-decoration: none;
+      text-transform: uppercase;
+
+      font-size: 12px;
+      letter-spacing: 2px;
+
+      transition: 0.25s;
+    }
+
+    .work:hover {
+      background: #fff;
+      color: #000;
+      border-color: #fff;
+    }
+
+    .special {
+      margin-top: 8px;
+      border-color: #777;
+    }
+
+    .coming {
+      margin-top: 35px;
+      font-size: 11px;
+      letter-spacing: 5px;
+      color: #777;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #555;
+      font-size: 11px;
+      letter-spacing: 3px;
+    }
+
+    @media (max-width: 800px) {
+
+      .hero {
+        padding: 20px;
+      }
+
+      .container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .photo {
+        min-height: 520px;
+      }
+
+      .brand {
+        letter-spacing: 6px;
+      }
+
+      .content {
+        padding-bottom: 30px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <h1
+<section class="hero">
 
-  <p>
+  <div class="container">
 
-  <div class="gallery">
-    <img src="IMG_1699.jpeg" alt="Картина SKALLA">
+    <div class="photo"></div>
+
+    <div class="content">
+
+      <h1 class="brand">SKALLA</h1>
+
+      <div class="subtitle">
+        WRITER · ARTIST · ART PERFORMANCE
+      </div>
+
+      <div class="statement">
+        I sell my heart.<br>
+        The heart of a shaman woman.<br>
+        Piece by piece.
+      </div>
+
+      <div class="statement-small">
+        Авторські тексти, поезія та арт-перформанс.
+        Особиста історія перетворюється на мистецтво.
+      </div>
+
+      <div class="works-title">Works</div>
+
+      <div class="works">
+
+        <a class="work" href="#">
+          Неполковнік Ісаєв 1 · Міні-есе
+        </a>
+
+        <a class="work" href="#">
+          Неполковнік Ісаєв 2 · Міні-есе
+        </a>
+
+        <a class="work" href="#">
+          Неполковнік Ісаєв 3 · Міні-есе
+        </a>
+
+        <a class="work" href="#">
+          Неполковнік Ісаєв 4 · Міні-есе
+        </a>
+
+        <a class="work" href="#">
+          Неполковнік Ісаєв 5 · Міні-есе
+        </a>
+
+        <a class="work" href="#">
+          Неполковнік Ісаєв 6 · Міні-есе
+        </a>
+
+        <a class="work special" href="#">
+          Карусель · Роман
+        </a>
+
+        <a class="work special" href="#">
+          Серце шаманки · Збірка віршів
+        </a>
+
+      </div>
+
+      <div class="coming">
+        COLLECTIBLE ART PERFORMANCE · COMING SOON
+      </div>
+
+    </div>
+
   </div>
+
+</section>
+
+<footer>
+  © 2026 SKALLA
+</footer>
 
 </body>
 </html>
-      
