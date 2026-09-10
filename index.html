@@ -1,3 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SKALLA — Art. Books. Performance.</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+    }
+
+    .hero {
+      width: 100%;
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .photo img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .content {
+      text-align: left;
+    }
+
+    .brand {
+      font-size: 64px;
+      font-weight: 700;
+      letter-spacing: 12px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 35px;
+    }
+
+    .statement {
+      font-size: 26px;
+      line-height: 1.35;
+      margin-bottom: 8px;
+    }
+
+    .statement-en {
+      font-size: 15px;
+      color: #aaa;
+      margin-bottom: 35px;
+      letter-spacing: 1px;
+    }
 
     .works {
       display: grid;
@@ -29,47 +104,46 @@
       border-color: #fff;
     }
 
-    .special {
-      margin-top: 8px;
-      border-color: #777;
-    }
-
     .coming {
-      margin-top: 35px;
+      margin-top: 25px;
       font-size: 11px;
-      letter-spacing: 5px;
-      color: #777;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #555;
-      font-size: 11px;
-      letter-spacing: 3px;
+      color: #666;
+      letter-spacing: 4px;
+      text-transform: uppercase;
     }
 
     @media (max-width: 800px) {
 
+      .page {
+        padding: 0;
+        display: block;
+      }
+
       .hero {
-        padding: 20px;
+        display: block;
       }
 
-      .container {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .photo {
-        min-height: 520px;
-      }
-
-      .brand {
-        letter-spacing: 6px;
+      .photo img {
+        width: 100%;
+        height: auto;
       }
 
       .content {
-        padding-bottom: 30px;
+        padding: 35px 22px 50px;
+      }
+
+      .brand {
+        font-size: 42px;
+        letter-spacing: 8px;
+      }
+
+      .subtitle {
+        font-size: 10px;
+        letter-spacing: 3px;
+      }
+
+      .statement {
+        font-size: 22px;
       }
     }
   </style>
@@ -77,82 +151,77 @@
 
 <body>
 
-<section class="hero">
+  <main class="page">
 
-  <div class="container">
+    <section class="hero">
 
-    <div class="photo"></div>
-
-    <div class="content">
-
-      <h1 class="brand">SKALLA</h1>
-
-      <div class="subtitle">
-        WRITER · ARTIST · ART PERFORMANCE
+      <div class="photo">
+        <img src="skalla.jpg" alt="Skalla">
       </div>
 
-      <div class="statement">
-        I sell my heart.<br>
-        The heart of a shaman woman.<br>
-        Piece by piece.
+      <div class="content">
+
+        <h1 class="brand">SKALLA</h1>
+
+        <div class="subtitle">
+          Writer · Artist · Art Performance
+        </div>
+
+        <div class="statement">
+          Продаю серце шаманки.<br>
+          Своє. Частинами.
+        </div>
+
+        <div class="statement-en">
+          I sell the heart of a shaman woman.<br>
+          Mine. Piece by piece.
+        </div>
+
+        <div class="works">
+
+          <a class="work" href="#">
+            Неполковник Ісаєв 1 — Міні-есе
+          </a>
+
+          <a class="work" href="#">
+            Неполковник Ісаєв 2 — Міні-есе
+          </a>
+
+          <a class="work" href="#">
+            Неполковник Ісаєв 3 — Міні-есе
+          </a>
+
+          <a class="work" href="#">
+            Неполковник Ісаєв 4 — Міні-есе
+          </a>
+
+          <a class="work" href="#">
+            Неполковник Ісаєв 5 — Міні-есе
+          </a>
+
+          <a class="work" href="#">
+            Неполковник Ісаєв 6 — Міні-есе
+          </a>
+
+          <a class="work" href="#">
+            Карусель — Роман
+          </a>
+
+          <a class="work" href="#">
+            Серце шаманки — Збірка віршів
+          </a>
+
+        </div>
+
+        <div class="coming">
+          Collectible literary & visual art
+        </div>
+
       </div>
 
-      <div class="statement-small">
-        Авторські тексти, поезія та арт-перформанс.
-        Особиста історія перетворюється на мистецтво.
-      </div>
+    </section>
 
-      <div class="works-title">Works</div>
-
-      <div class="works">
-
-        <a class="work" href="#">
-          Неполковнік Ісаєв 1 · Міні-есе
-        </a>
-
-        <a class="work" href="#">
-          Неполковнік Ісаєв 2 · Міні-есе
-        </a>
-
-        <a class="work" href="#">
-          Неполковнік Ісаєв 3 · Міні-есе
-        </a>
-
-        <a class="work" href="#">
-          Неполковнік Ісаєв 4 · Міні-есе
-        </a>
-
-        <a class="work" href="#">
-          Неполковнік Ісаєв 5 · Міні-есе
-        </a>
-
-        <a class="work" href="#">
-          Неполковнік Ісаєв 6 · Міні-есе
-        </a>
-
-        <a class="work special" href="#">
-          Карусель · Роман
-        </a>
-
-        <a class="work special" href="#">
-          Серце шаманки · Збірка віршів
-        </a>
-
-      </div>
-
-      <div class="coming">
-        COLLECTIBLE ART PERFORMANCE · COMING SOON
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<footer>
-  © 2026 SKALLA
-</footer>
+  </main>
 
 </body>
 </html>
