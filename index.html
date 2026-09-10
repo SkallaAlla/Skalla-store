@@ -22,128 +22,161 @@
     .page {
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
+    }
+
+    .top {
+      padding: 24px 22px 18px;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      padding: 30px 20px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 6px;
+    }
+
+    .menu {
+      font-size: 13px;
+      letter-spacing: 2px;
+      opacity: 0.75;
     }
 
     .hero {
-      width: 100%;
-      max-width: 1200px;
+      flex: 1;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
+      grid-template-columns: 52% 48%;
+      min-height: calc(100vh - 90px);
+    }
+
+    .photo {
+      position: relative;
+      overflow: hidden;
+      min-height: 650px;
     }
 
     .photo img {
       width: 100%;
-      display: block;
+      height: 100%;
       object-fit: cover;
+      object-position: center top;
+      display: block;
     }
 
     .content {
-      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 8vw 60px 7vw;
     }
 
-    .brand {
-      font-size: 64px;
+    .small {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      opacity: 0.6;
+    }
+
+    h1 {
+      font-size: clamp(48px, 7vw, 105px);
+      line-height: 0.9;
       font-weight: 700;
-      letter-spacing: 12px;
-      margin-bottom: 10px;
+      letter-spacing: -3px;
+      margin-bottom: 28px;
     }
 
     .subtitle {
-      font-size: 13px;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      color: #aaa;
-      margin-bottom: 35px;
+      max-width: 520px;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #bcbcbc;
+      margin-bottom: 42px;
     }
 
-    .statement {
-      font-size: 26px;
-      line-height: 1.35;
-      margin-bottom: 8px;
-    }
-
-    .statement-en {
-      font-size: 15px;
-      color: #aaa;
-      margin-bottom: 35px;
-      letter-spacing: 1px;
-    }
-
-    .works {
-      display: grid;
-      gap: 10px;
-    }
-
-    .work {
-      display: block;
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
       width: 100%;
-      padding: 15px 18px;
+      max-width: 410px;
+    }
 
-      color: #fff;
-      background: transparent;
-
-      border: 1px solid #333;
-
+    .btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       text-decoration: none;
-      text-transform: uppercase;
-
-      font-size: 12px;
+      color: #fff;
+      border: 1px solid #444;
+      padding: 19px 20px;
+      font-size: 13px;
       letter-spacing: 2px;
-
+      text-transform: uppercase;
       transition: 0.25s;
     }
 
-    .work:hover {
+    .btn:hover {
       background: #fff;
       color: #000;
-      border-color: #fff;
     }
 
-    .coming {
-      margin-top: 25px;
-      font-size: 11px;
-      color: #666;
-      letter-spacing: 4px;
-      text-transform: uppercase;
+    .arrow {
+      font-size: 18px;
     }
 
     @media (max-width: 800px) {
+      .top {
+        padding: 20px 18px;
+      }
 
-      .page {
-        padding: 0;
-        display: block;
+      .logo {
+        font-size: 23px;
+        letter-spacing: 5px;
+      }
+
+      .menu {
+        display: none;
       }
 
       .hero {
         display: block;
+        min-height: auto;
+      }
+
+      .photo {
+        width: 100%;
+        height: 58vh;
+        min-height: 430px;
       }
 
       .photo img {
-        width: 100%;
-        height: auto;
+        object-position: center top;
       }
 
       .content {
-        padding: 35px 22px 50px;
+        padding: 42px 22px 60px;
       }
 
-      .brand {
-        font-size: 42px;
-        letter-spacing: 8px;
+      h1 {
+        font-size: 52px;
+        line-height: 0.92;
+        letter-spacing: -2px;
       }
 
       .subtitle {
-        font-size: 10px;
-        letter-spacing: 3px;
+        font-size: 15px;
+        margin-bottom: 30px;
       }
 
-      .statement {
-        font-size: 22px;
+      .buttons {
+        max-width: none;
+      }
+
+      .btn {
+        padding: 18px;
       }
     }
   </style>
@@ -151,77 +184,63 @@
 
 <body>
 
-  <main class="page">
+<div class="page">
 
-    <section class="hero">
+  <header class="top">
+    <div class="logo">SKALLA</div>
+    <div class="menu">ART · BOOKS · PERFORMANCE</div>
+  </header>
 
-      <div class="photo">
-        <img src="skalla.jpg" alt="Skalla">
-      </div>
+  <main class="hero">
 
-      <div class="content">
+    <section class="photo">
+      <img src="IMG_1699.jpeg" alt="SKALLA">
+    </section>
 
-        <h1 class="brand">SKALLA</h1>
+    <section class="content">
 
-        <div class="subtitle">
-          Writer · Artist · Art Performance
-        </div>
+      <div class="small">Writer · Artist · Performance</div>
 
-        <div class="statement">
-          Продаю серце шаманки.<br>
-          Своє. Частинами.
-        </div>
+      <h1>
+        HEART<br>
+        OF A<br>
+        SHAMAN
+      </h1>
 
-        <div class="statement-en">
-          I sell the heart of a shaman woman.<br>
-          Mine. Piece by piece.
-        </div>
+      <p class="subtitle">
+        Я перетворюю прожите на мистецтво.
+        Тексти, поезія, образи та колекційні арт-об’єкти.
+      </p>
 
-        <div class="works">
+      <div class="buttons">
 
-          <a class="work" href="#">
-            Неполковник Ісаєв 1 — Міні-есе
-          </a>
+        <a class="btn" href="#">
+          СЕРЦЕ ШАМАНКИ
+          <span class="arrow">→</span>
+        </a>
 
-          <a class="work" href="#">
-            Неполковник Ісаєв 2 — Міні-есе
-          </a>
+        <a class="btn" href="#">
+          НЕПОЛКОВНИК ІСАЄВ
+          <span class="arrow">→</span>
+        </a>
 
-          <a class="work" href="#">
-            Неполковник Ісаєв 3 — Міні-есе
-          </a>
+        <a class="btn" href="#">
+          ART / PERFORMANCE
+          <span class="arrow">→</span>
+        </a>
 
-          <a class="work" href="#">
-            Неполковник Ісаєв 4 — Міні-есе
-          </a>
-
-          <a class="work" href="#">
-            Неполковник Ісаєв 5 — Міні-есе
-          </a>
-
-          <a class="work" href="#">
-            Неполковник Ісаєв 6 — Міні-есе
-          </a>
-
-          <a class="work" href="#">
-            Карусель — Роман
-          </a>
-
-          <a class="work" href="#">
-            Серце шаманки — Збірка віршів
-          </a>
-
-        </div>
-
-        <div class="coming">
-          Collectible literary & visual art
-        </div>
+        <a class="btn" href="#">
+          ABOUT SKALLA
+          <span class="arrow">→</span>
+        </a>
 
       </div>
 
     </section>
 
   </main>
+
+</div>
 
 </body>
 </html>
